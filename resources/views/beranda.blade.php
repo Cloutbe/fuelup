@@ -19,13 +19,6 @@ $coffees = [
   ["Butterscotch Latte", "Rich South Indian classic, freshly roasted.", 22000, "filter.jpg"],
 ];
 
-$desserts = [
-  ["Gulab Jamun", "Soft balls made with sugar & cardamom syrup.", 19900, "jamun.jpg"],
-  ["Chocolate Tiramisu", "Layers of mascarpone cream & cocoa.", 25000, "tiramisu.jpg"],
-  ["Churros", "Crispy pastry with bittersweet chocolate.", 17000, "churros.jpg"],
-  ["Australian Lamingtons", "Delicious sponge cake with coconut.", 28000, "lamingtons.jpg"],
-];
-
 $testimonials = [
   ["Jane Adams", "Designer", "The cappuccino was perfect, and the pricing was great!", 5],
   ["Sam Williams", "Entrepreneur", "Best beans and customer service!", 5],
@@ -34,16 +27,23 @@ $testimonials = [
 ?>
 
 <!-- NAVBAR -->
-<header class="bg-[#0f172a] text-white flex justify-between items-center px-10 py-4 shadow-lg">
-  <h1 class="text-2xl font-bold tracking-wide">Fuel Up</h1>
+<header class="bg-white text-black flex justify-between items-center px-10 py-4 shadow-md">
+
+  <!-- LOGO + TEXT -->
+  <div class="flex items-center space-x-5">
+    <img src="images/fuelup.png" alt="Fuel Up Logo" class="w-10 h-10 object-cover">
+    <h1 class="text-2xl font-bold tracking-wide">Fuel Up</h1>
+  </div>
+
+  <!-- MENU -->
   <nav class="space-x-8 text-sm uppercase tracking-wide">
-    <a href="#" class="hover:text-[#38bdf8] transition">Home</a>
-    <a href="#" class="hover:text-[#38bdf8] transition">Coffee</a>
-    <a href="#" class="hover:text-[#38bdf8] transition">Bakery</a>
-    <a href="#" class="hover:text-[#38bdf8] transition">Shop</a>
-    <a href="#" class="hover:text-[#38bdf8] transition">About</a>
-    <a href="#" class="hover:text-[#38bdf8] transition">Login</a>
+    <a href="#" class="hover:text-[#4E71FF] transition font-medium">Home</a>
+    <a href="#" class="hover:text-[#4E71FF] transition font-medium">Coffee</a>
+    <a href="#" class="hover:text-[#4E71FF] transition font-medium">Shop</a>
+    <a href="#" class="hover:text-[#4E71FF] transition font-medium">About</a>
+    <a href="#" class="hover:text-[#4E71FF] transition font-medium">Login</a>
   </nav>
+
 </header>
 
 <!-- HERO -->   
@@ -89,26 +89,6 @@ $testimonials = [
           <p class="text-sm text-gray-600 mb-3"><?= $c[1] ?></p>
           <div class="flex justify-between items-center">
             <span class="font-bold text-[#1d4ed8]">Rp <?= number_format($c[2], 0, ',', '.') ?></span>
-            <button class="bg-[#0f172a] text-white text-sm px-3 py-1 rounded hover:bg-[#1d4ed8] transition">Order Now</button>
-          </div>
-        </div>
-      </div>
-    <?php endforeach; ?>
-  </div>
-</section>
-
-<!-- DESSERT PRODUCTS -->
-<section class="py-16 bg-[#f0f9ff]">
-  <h3 class="text-center text-3xl font-bold text-[#0f172a] mb-10">OUR SPECIAL DESSERT</h3>
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
-    <?php foreach ($desserts as $d): ?>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-        <img src="images/<?= $d[3] ?>" class="w-full h-56 object-cover">
-        <div class="p-4">
-          <h4 class="font-semibold text-lg mb-2"><?= $d[0] ?></h4>
-          <p class="text-sm text-gray-600 mb-3"><?= $d[1] ?></p>
-          <div class="flex justify-between items-center">
-            <span class="font-bold text-[#1d4ed8]">Rp <?= number_format($d[2], 0, ',', '.') ?></span>
             <button class="bg-[#0f172a] text-white text-sm px-3 py-1 rounded hover:bg-[#1d4ed8] transition">Order Now</button>
           </div>
         </div>
