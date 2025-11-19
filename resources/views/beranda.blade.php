@@ -79,7 +79,7 @@ $testimonials = [
 
 <!-- COFFEE PRODUCTS -->
 <section class="py-16 bg-white">
-  <h3 class="text-center text-3xl font-bold text-[#0f172a] mb-10">OUR SPECIAL COFFEE</h3>
+  <h3 class="text-center text-3xl font-bold text-[#0f172a] mb-10">OUR SPESIAL COFFEE</h3>
   <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
     <?php foreach ($coffees as $c): ?>
       <div class="bg-[#e0f2fe] rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
